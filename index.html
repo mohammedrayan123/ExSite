@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Focused Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Our Store</h1>
+        <p>Discover our top-selling products!</p>
+        <nav>
+            <a href="cart.html">View Cart</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Best Deals of the Season</h2>
+        <a href="#products" class="shop-now">Shop Now</a>
+    </section>
+
+    <!-- Product Categories -->
+    <section id="products">
+        <h2>Product Categories</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Product 1</h3>
+                <p>$19.99</p>
+                <button class="add-to-cart" data-product="Product 1" data-price="19.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>Product 2</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart" data-product="Product 2" data-price="29.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>Product 3</h3>
+                <p>$39.99</p>
+                <button class="add-to-cart" data-product="Product 3" data-price="39.99">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>Watch Our Product Demo</h2>
+        <video controls width="600">
+            <source src="demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Our Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
