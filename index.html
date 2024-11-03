@@ -34,7 +34,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 
-
    <!-- Start VWO Async SmartCode -->
 <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
 <script type='text/javascript' id='vwoCode'>
@@ -54,13 +53,16 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGJ66V2P"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <!-- Header Section -->
+
+    <!-- Header Section with Search Bar -->
     <header>
         <h1>Welcome to Bike Gear Hub</h1>
         <p>Your one-stop shop for premium bike accessories!</p>
         <nav>
             <a href="cart.html">View Cart</a>
         </nav>
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()" />
     </header>
 
     <!-- Hero Section -->
@@ -102,27 +104,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="video-section">
         <section class="video-section">
         
-            <br><br><br><br>,<br><br><iframe width="560" height="315" src="https://www.youtube.com/embed/ahX6w5NKbgI?si=bEsfKwMXDdtKkTbl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br><br><br><br>,<br><br><iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    </section>
-    </section>
+</section>
 
-    <div>Order your items here</div>
-    <button> View Items</button>
-
-
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Bike Gear Hub. All rights reserved.</p>
-    </footer>
+    <!-- JavaScript for Search Functionality -->
+    <script>
+        function searchProducts() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                let productName = card.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(input)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-
-
-
-
-
 
 
 
