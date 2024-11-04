@@ -52,12 +52,176 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="cart">
         <div id="cart-items"></div>
-        <button id="clear-cart" class="clear-cart-btn">Clear Cart</button>
-        <a href="payment.html" class="checkout-btn">Proceed to Checkout</a>
+        <button id="clear-cart" id="remove-from-cart" class="clear-cart-btn">Clear Cart</button>
+        <a href="payment.html" class="checkout-btn" id="begin-checkout">Proceed to Checkout</a>
     </section>
 
     <footer>
         <p>&copy; 2024 Our Store. All rights reserved.</p>
     </footer>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HSK57N6LX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-6HSK57N6LX', { 'debug_mode': true });
+    </script>
+</head>
+<body>
+    <div>Click the buttons for custom events</div>
+
+    <!-- Select Item button -->
+    <button id="select-item">Select Item</button>
+
+    <!-- Add to Cart button -->
+    <button id="add-to-cart">Add to Cart</button>
+
+    <!-- View Item List button -->
+    <button id="view-item-list">View Item List</button>
+
+    <!-- Begin Checkout button -->
+    <button id="begin-checkout">Begin Checkout</button>
+
+    <!-- Remove from Cart button -->
+    <button id="remove-from-cart">Remove from Cart</button>
+
+    <script>
+    // Event for selecting an item
+    document.getElementById("select-item").addEventListener("click", function () {
+        gtag("event", "select_item", {
+            item_list_id: "bestsellers",
+            item_list_name: "Popular Accessories",
+            items: [
+            {
+              item_id: "accessory_01",
+              item_name: "Mountain Bike Helmet",
+              affiliation: "ExSite",
+              coupon: "SPRING_SALE",
+              discount: 5.00,
+              index: 0,
+              item_brand: "ExSite",
+              item_category: "Helmets",
+              item_category2: "Safety Gear",
+              item_category3: "Bike Accessories",
+              item_variant: "Black",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 59.99,
+              quantity: 1
+            }]
+        });
+    });
+
+    // Event for adding an item to the cart
+    document.getElementById("add-to-cart").addEventListener("click", function () {
+        gtag("event", "add_to_cart", {
+            currency: "USD",
+            value: 59.99,
+            items: [
+            {
+              item_id: "accessory_01",
+              item_name: "Mountain Bike Helmet",
+              affiliation: "ExSite",
+              coupon: "SPRING_SALE",
+              discount: 5.00,
+              index: 0,
+              item_brand: "ExSite",
+              item_category: "Helmets",
+              item_category2: "Safety Gear",
+              item_category3: "Bike Accessories",
+              item_variant: "Black",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 59.99,
+              quantity: 1
+            }]
+        });
+    });
+
+    // Event for viewing an item list
+    document.getElementById("view-item-list").addEventListener("click", function () {
+        gtag("event", "view_item_list", {
+            item_list_id: "bestsellers",
+            item_list_name: "Popular Accessories",
+            items: [
+            {
+              item_id: "accessory_01",
+              item_name: "Mountain Bike Helmet",
+              affiliation: "ExSite",
+              coupon: "SPRING_SALE",
+              discount: 5.00,
+              index: 0,
+              item_brand: "ExSite",
+              item_category: "Helmets",
+              item_category2: "Safety Gear",
+              item_category3: "Bike Accessories",
+              item_variant: "Black",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 59.99,
+              quantity: 1
+            }]
+        });
+    });
+
+    // Event for beginning checkout process
+    document.getElementById("begin-checkout").addEventListener("click", function () {
+        gtag("event", "begin_checkout", {
+            currency: "USD",
+            value: 59.99,
+            coupon: "SPRING_SALE",
+            items: [
+            {
+              item_id: "accessory_01",
+              item_name: "Mountain Bike Helmet",
+              affiliation: "ExSite",
+              coupon: "SPRING_SALE",
+              discount: 5.00,
+              index: 0,
+              item_brand: "ExSite",
+              item_category: "Helmets",
+              item_category2: "Safety Gear",
+              item_category3: "Bike Accessories",
+              item_variant: "Black",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 59.99,
+              quantity: 1
+            }]
+        });
+    });
+
+    // Event for removing an item from the cart
+    document.getElementById("remove-from-cart").addEventListener("click", function () {
+        gtag("event", "remove_from_cart", {
+            currency: "USD",
+            value: 59.99,
+            items: [
+            {
+              item_id: "accessory_01",
+              item_name: "Mountain Bike Helmet",
+              affiliation: "ExSite",
+              coupon: "SPRING_SALE",
+              discount: 5.00,
+              index: 0,
+              item_brand: "ExSite",
+              item_category: "Helmets",
+              item_category2: "Safety Gear",
+              item_category3: "Bike Accessories",
+              item_variant: "Black",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 59.99,
+              quantity: 1
+            }]
+        });
+    });
+    </script>
 </body>
 </html>
